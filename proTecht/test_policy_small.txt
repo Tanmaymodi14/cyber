@@ -1,0 +1,21 @@
+Access Control Policy
+
+1. Purpose
+This policy establishes guidelines for access control within our organization.
+
+2. Scope
+This policy applies to all employees and contractors.
+
+3. Responsibilities
+- IT Department: Implement access controls
+- HR Department: Manage user provisioning
+- Security Team: Monitor access violations
+
+4. Access Control Requirements
+- Users must authenticate before accessing systems
+- Access must be granted based on job function
+- Regular access reviews must be conducted
+- Unused accounts must be disabled
+
+5. Compliance
+This policy ensures compliance with AC-1 requirements.

@@ -1,0 +1,10 @@
+#!/bin/bash
+# Simple policy analysis wrapper script
+
+# Get the directory where this script is located
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+# Activate virtual environment and run analysis
+cd "$SCRIPT_DIR"
+source .venv/bin/activate
+python analyze_policy.py "$@"

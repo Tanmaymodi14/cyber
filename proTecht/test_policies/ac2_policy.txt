@@ -1,0 +1,2 @@
+Account Management Policy
+Defines account types, assignment of account managers, group/role membership conditions, approvals, provisioning, monitoring, notifications, authorization, annual reviews, and reissue of shared credentials.

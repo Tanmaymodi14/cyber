@@ -1,0 +1,332 @@
+{
+  "suffix": "64d67db5",
+  "iam_users": [
+    "ashley.anderson0",
+    "lisa.lopez1",
+    "sarah.gonzalez2",
+    "emma.gonzalez3",
+    "jane.garcia4",
+    "jennifer.lopez5",
+    "sarah.brown6",
+    "jennifer.smith7",
+    "sarah.gonzalez8",
+    "michael.miller9",
+    "michael.johnson10",
+    "jessica.thomas11",
+    "amy.thomas12",
+    "sarah.williams13",
+    "james.martinez14",
+    "james.rodriguez15",
+    "lisa.smith16",
+    "tom.johnson17",
+    "robert.wilson18",
+    "john.rodriguez19",
+    "robert.lopez20",
+    "robert.wilson21",
+    "sarah.johnson22",
+    "tom.hernandez23",
+    "amy.lopez24",
+    "david.martinez25",
+    "jane.anderson26",
+    "james.miller27",
+    "maria.anderson28",
+    "james.garcia29"
+  ],
+  "s3_buckets": [
+    "protecht-it-64d67db5",
+    "protecht-finance-64d67db5",
+    "protecht-hr-64d67db5",
+    "protecht-engineering-64d67db5",
+    "protecht-legal-64d67db5",
+    "protecht-operations-64d67db5"
+  ],
+  "kms_keys": [
+    "9c10a4a9-d2ef-4d4a-95a1-3aeb0ea706b9",
+    "d32e68d0-b96e-413b-98a3-493b9a53b7ce",
+    "f1dc5921-8da9-46b9-96b4-faa6bf7b7768",
+    "4334a3c5-3d49-4adb-b24f-e5d8b20ad4a4",
+    "ef654cea-0088-4b06-8402-4f6726db85bf",
+    "23811437-8d34-4881-b989-5d2ecd753652",
+    "34fe0812-bce4-428d-bf71-626ea4c0ff5b"
+  ],
+  "iam_roles": [],
+  "cloudtrail_trails": [],
+  "waf_webacls": [
+    "arn:aws:wafv2:us-east-1:957103508532:global/webacl/protecht-strict-security/fbe11479-8647-4d87-b810-3c7299baad8d",
+    "arn:aws:wafv2:us-east-1:957103508532:global/webacl/protecht-permissive/ab994b7d-c74c-4763-b67c-019beb133bcf"
+  ],
+  "guardduty_detector": "5eccc1f24829ac2b4f27b2a584cea111",
+  "security_hub": true,
+  "user_profiles": [
+    {
+      "username": "ashley.anderson0",
+      "department": "Operations",
+      "role": "intern",
+      "access_level": "intern",
+      "mfa_enabled": false,
+      "password_policy": "weak",
+      "last_login_days": 53
+    },
+    {
+      "username": "lisa.lopez1",
+      "department": "IT",
+      "role": "intern",
+      "access_level": "intern",
+      "mfa_enabled": true,
+      "password_policy": "strong",
+      "last_login_days": 87
+    },
+    {
+      "username": "sarah.gonzalez2",
+      "department": "Marketing",
+      "role": "contractor",
+      "access_level": "contractor",
+      "mfa_enabled": true,
+      "password_policy": "weak",
+      "last_login_days": 68
+    },
+    {
+      "username": "emma.gonzalez3",
+      "department": "IT",
+      "role": "intern",
+      "access_level": "intern",
+      "mfa_enabled": true,
+      "password_policy": "strong",
+      "last_login_days": 26
+    },
+    {
+      "username": "jane.garcia4",
+      "department": "HR",
+      "role": "power_user",
+      "access_level": "power_user",
+      "mfa_enabled": true,
+      "password_policy": "strong",
+      "last_login_days": 39
+    },
+    {
+      "username": "jennifer.lopez5",
+      "department": "IT",
+      "role": "standard",
+      "access_level": "standard",
+      "mfa_enabled": true,
+      "password_policy": "strong",
+      "last_login_days": 36
+    },
+    {
+      "username": "sarah.brown6",
+      "department": "Operations",
+      "role": "standard",
+      "access_level": "standard",
+      "mfa_enabled": false,
+      "password_policy": "medium",
+      "last_login_days": 61
+    },
+    {
+      "username": "jennifer.smith7",
+      "department": "Finance",
+      "role": "admin",
+      "access_level": "admin",
+      "mfa_enabled": true,
+      "password_policy": "strong",
+      "last_login_days": 84
+    },
+    {
+      "username": "sarah.gonzalez8",
+      "department": "Marketing",
+      "role": "contractor",
+      "access_level": "contractor",
+      "mfa_enabled": true,
+      "password_policy": "weak",
+      "last_login_days": 51
+    },
+    {
+      "username": "michael.miller9",
+      "department": "Operations",
+      "role": "read_only",
+      "access_level": "read_only",
+      "mfa_enabled": false,
+      "password_policy": "weak",
+      "last_login_days": 36
+    },
+    {
+      "username": "michael.johnson10",
+      "department": "Finance",
+      "role": "power_user",
+      "access_level": "power_user",
+      "mfa_enabled": true,
+      "password_policy": "strong",
+      "last_login_days": 2
+    },
+    {
+      "username": "jessica.thomas11",
+      "department": "Marketing",
+      "role": "read_only",
+      "access_level": "read_only",
+      "mfa_enabled": false,
+      "password_policy": "weak",
+      "last_login_days": 37
+    },
+    {
+      "username": "amy.thomas12",
+      "department": "HR",
+      "role": "standard",
+      "access_level": "standard",
+      "mfa_enabled": false,
+      "password_policy": "medium",
+      "last_login_days": 79
+    },
+    {
+      "username": "sarah.williams13",
+      "department": "IT",
+      "role": "standard",
+      "access_level": "standard",
+      "mfa_enabled": true,
+      "password_policy": "strong",
+      "last_login_days": 90
+    },
+    {
+      "username": "james.martinez14",
+      "department": "IT",
+      "role": "standard",
+      "access_level": "standard",
+      "mfa_enabled": true,
+      "password_policy": "strong",
+      "last_login_days": 38
+    },
+    {
+      "username": "james.rodriguez15",
+      "department": "Legal",
+      "role": "power_user",
+      "access_level": "power_user",
+      "mfa_enabled": true,
+      "password_policy": "strong",
+      "last_login_days": 48
+    },
+    {
+      "username": "lisa.smith16",
+      "department": "Operations",
+      "role": "contractor",
+      "access_level": "contractor",
+      "mfa_enabled": true,
+      "password_policy": "medium",
+      "last_login_days": 76
+    },
+    {
+      "username": "tom.johnson17",
+      "department": "Finance",
+      "role": "admin",
+      "access_level": "admin",
+      "mfa_enabled": true,
+      "password_policy": "strong",
+      "last_login_days": 48
+    },
+    {
+      "username": "robert.wilson18",
+      "department": "Operations",
+      "role": "contractor",
+      "access_level": "contractor",
+      "mfa_enabled": true,
+      "password_policy": "medium",
+      "last_login_days": 75
+    },
+    {
+      "username": "john.rodriguez19",
+      "department": "IT",
+      "role": "read_only",
+      "access_level": "read_only",
+      "mfa_enabled": true,
+      "password_policy": "strong",
+      "last_login_days": 47
+    },
+    {
+      "username": "robert.lopez20",
+      "department": "Marketing",
+      "role": "intern",
+      "access_level": "intern",
+      "mfa_enabled": false,
+      "password_policy": "weak",
+      "last_login_days": 40
+    },
+    {
+      "username": "robert.wilson21",
+      "department": "Finance",
+      "role": "intern",
+      "access_level": "intern",
+      "mfa_enabled": true,
+      "password_policy": "strong",
+      "last_login_days": 80
+    },
+    {
+      "username": "sarah.johnson22",
+      "department": "Marketing",
+      "role": "standard",
+      "access_level": "standard",
+      "mfa_enabled": false,
+      "password_policy": "weak",
+      "last_login_days": 32
+    },
+    {
+      "username": "tom.hernandez23",
+      "department": "Engineering",
+      "role": "intern",
+      "access_level": "intern",
+      "mfa_enabled": false,
+      "password_policy": "weak",
+      "last_login_days": 56
+    },
+    {
+      "username": "amy.lopez24",
+      "department": "Engineering",
+      "role": "read_only",
+      "access_level": "read_only",
+      "mfa_enabled": false,
+      "password_policy": "weak",
+      "last_login_days": 29
+    },
+    {
+      "username": "david.martinez25",
+      "department": "Marketing",
+      "role": "read_only",
+      "access_level": "read_only",
+      "mfa_enabled": false,
+      "password_policy": "weak",
+      "last_login_days": 78
+    },
+    {
+      "username": "jane.anderson26",
+      "department": "HR",
+      "role": "standard",
+      "access_level": "standard",
+      "mfa_enabled": false,
+      "password_policy": "medium",
+      "last_login_days": 62
+    },
+    {
+      "username": "james.miller27",
+      "department": "Legal",
+      "role": "contractor",
+      "access_level": "contractor",
+      "mfa_enabled": true,
+      "password_policy": "strong",
+      "last_login_days": 6
+    },
+    {
+      "username": "maria.anderson28",
+      "department": "HR",
+      "role": "read_only",
+      "access_level": "read_only",
+      "mfa_enabled": false,
+      "password_policy": "weak",
+      "last_login_days": 2
+    },
+    {
+      "username": "james.garcia29",
+      "department": "Finance",
+      "role": "power_user",
+      "access_level": "power_user",
+      "mfa_enabled": true,
+      "password_policy": "strong",
+      "last_login_days": 58
+    }
+  ]
+}

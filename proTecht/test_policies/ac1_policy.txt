@@ -1,0 +1,9 @@
+Access Control Policy and Procedures
+Purpose: Define access control policy and associated procedures.
+Scope: Organization-wide.
+Roles and Responsibilities: CISO, System Owners.
+Management Commitment: The organization commits to implementing access control.
+Coordination: Coordination among organizational entities.
+Compliance: Compliance with FedRAMP.
+Procedures: Steps to implement access control.
+Review Cadence: Policy reviewed every 3 years; procedures annually.

@@ -1,0 +1,9 @@
+{
+  "suffix": "4d6f43ad",
+  "s3_bucket": "protecht-ac-test-4d6f43ad",
+  "kms_key_id": "1223bfd1-1c13-44c6-a243-638cce75ce12",
+  "iam_role": "protecht-ac-test-role-4d6f43ad",
+  "guardduty_detector": "5eccc1f24829ac2b4f27b2a584cea111",
+  "securityhub": true,
+  "waf_web_acl_arn": "arn:aws:wafv2:us-east-1:957103508532:global/webacl/protecht-ac-test-waf-4d6f43ad/cbff0b11-2fe2-4ece-83fa-1168c96c10f0"
+}

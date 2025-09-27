@@ -1,0 +1,32 @@
+ACCESS CONTROL POLICY
+
+1. PURPOSE
+This policy establishes access control procedures to ensure only authorized individuals have appropriate access to organizational information systems and data.
+
+2. SCOPE
+This policy applies to all personnel, contractors, and third-party users requiring access to organizational systems.
+
+3. ROLES AND RESPONSIBILITIES
+- Chief Information Security Officer: Overall responsibility for access control program
+- Access Control Administrator: Day-to-day management of user accounts and access rights
+- Department Managers: Approve access requests for their personnel
+- System Owners: Define access requirements for their systems
+- Users: Protect credentials and report security incidents
+
+4. ACCESS PROVISIONING PROCEDURES
+New user access follows this process:
+1. Manager submits formal access request with business justification
+2. Security Officer reviews request against role-based access matrix
+3. IT provisions minimum necessary access based on job functions
+4. User completes mandatory security awareness training
+5. Access is granted and documented in access control system
+
+5. ACCESS REVIEW AND MONITORING
+- Quarterly access reviews by department managers
+- Monthly reviews for privileged accounts
+- Real-time monitoring of all access attempts
+- Automated alerts for suspicious activities
+- Annual comprehensive access audit
+
+6. POLICY REVIEW
+This policy is reviewed annually by the Security Committee and updated as needed based on threat landscape changes and regulatory requirements.

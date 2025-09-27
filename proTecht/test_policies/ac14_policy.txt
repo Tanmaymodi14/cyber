@@ -1,0 +1,5 @@
+Permitted Actions Without Identification or Authentication
+This policy defines organization-approved user actions allowed without identification or authentication.
+Supporting Rationale: These actions support mission/business functions.
+Identification Requirements: Not required for permitted actions; otherwise required.
+Authentication Requirements: Not required for permitted actions; otherwise required.

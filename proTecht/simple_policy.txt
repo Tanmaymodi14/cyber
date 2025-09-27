@@ -1,0 +1,1 @@
+This is a simple access control policy for testing. It defines user permissions and access procedures.

@@ -1,0 +1,5 @@
+Use of External Information Systems Policy
+Terms and Conditions: Defined for external system use.
+Trust Relationships: Documented and approved.
+External System Access: Authorized individuals only.
+Information Processing: Control processing, storage, and transmission.

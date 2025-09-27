@@ -1,0 +1,10 @@
+{
+  "suffix": "1003de7b",
+  "s3_secure": "protecht-secure-1003de7b",
+  "s3_public": "protecht-public-1003de7b",
+  "s3_noenc": "protecht-noenc-1003de7b",
+  "kms_rot": "c0ebe255-aa73-47d0-a0da-7295cd35aecf",
+  "kms_norot": "078de3ae-c8e4-47e9-8598-c39500439d2c",
+  "waf_block": null,
+  "waf_allow": null
+}
