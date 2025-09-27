@@ -1,0 +1,57 @@
+name: Backend CI/CD (EC2 via SSM)
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'proTecht/deploy_package/**'
+      - 'proTecht/src/**'
+      - '.github/workflows/backend.yml'
+
+jobs:
+  package-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    env:
+      AWS_REGION: ${{ secrets.AWS_REGION }}
+      ARTIFACTS_BUCKET: ${{ secrets.ARTIFACTS_BUCKET }}
+      EC2_INSTANCE_ID: ${{ secrets.EC2_INSTANCE_ID }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure AWS
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Create backend artifact
+        run: |
+          ts=$(date +%s)
+          zip_name=protecht_backend_$ts.zip
+          cd proTecht/deploy_package
+          zip -qr /tmp/$zip_name .
+          aws s3 cp /tmp/$zip_name s3://$ARTIFACTS_BUCKET/$zip_name
+          echo "ZIP=$zip_name" >> $GITHUB_ENV
+
+      - name: Deploy via SSM to EC2
+        run: |
+          aws ssm send-command \
+            --instance-ids "$EC2_INSTANCE_ID" \
+            --document-name AWS-RunShellScript \
+            --comment "CI deploy backend" \
+            --parameters commands='["sudo mkdir -p /opt/protecht/update","sudo aws s3 cp s3://'$ARTIFACTS_BUCKET'/'$ZIP' /opt/protecht/update/$ZIP","cd /opt/protecht/proTecht/deploy_package && sudo unzip -o -q /opt/protecht/update/$ZIP","sudo bash -lc 'source /opt/protecht/venv/bin/activate && pip install --upgrade pip && pip install -r /opt/protecht/proTecht/deploy_package/requirements.txt'","sudo systemctl restart protecht","sleep 2","curl -sf http://127.0.0.1:8000/api/health"]' \
+            --timeout-seconds 1800 > /tmp/ssm.json
+          id=$(jq -r .Command.CommandId /tmp/ssm.json)
+          echo SSM_COMMAND_ID=$id
+          # poll
+          for i in {1..30}; do
+            st=$(aws ssm list-command-invocations --command-id "$id" --details --query 'CommandInvocations[0].Status' --output text); echo "status=$st"; [ "$st" = "Success" ] && break; sleep 5; done
+          [ "$st" = "Success" ] || (echo "Deploy failed" && exit 1)
+
+
