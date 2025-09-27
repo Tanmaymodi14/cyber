@@ -44,7 +44,7 @@ jobs:
 
       - name: Sync to S3
         run: |
-          aws s3 sync proTecht/Frontend/dist s3://${{ env.FRONTEND_S3_BUCKET }} --delete --cache-control max-age=300
+          aws s3 sync proTecht/Frontend/build s3://${{ env.FRONTEND_S3_BUCKET }} --delete --cache-control max-age=300
 
       - name: Invalidate CloudFront
         run: |
