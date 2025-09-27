@@ -45,7 +45,7 @@ jobs:
             --instance-ids "${{ env.EC2_INSTANCE_ID }}" \
             --document-name AWS-RunShellScript \
             --comment "CI deploy backend" \
-            --parameters commands='["sudo mkdir -p /opt/protecht/update","sudo aws s3 cp s3://${{ env.ARTIFACTS_BUCKET }}/'$ZIP' /opt/protecht/update/'$ZIP'","cd /opt/protecht/proTecht/deploy_package && sudo unzip -o -q /opt/protecht/update/'$ZIP'","sudo bash -lc 'source /opt/protecht/venv/bin/activate && pip install --upgrade pip && pip install -r /opt/protecht/proTecht/deploy_package/requirements.txt'","sudo systemctl restart protecht","sleep 2","curl -sf http://127.0.0.1:8000/api/health"]' \
+            --parameters commands='["sudo mkdir -p /opt/protecht/update","sudo aws s3 cp s3://${{ env.ARTIFACTS_BUCKET }}/'$ZIP' /opt/protecht/update/'$ZIP'","cd /opt/protecht/proTecht/deploy_package && sudo unzip -o -q /opt/protecht/update/'$ZIP'","sudo bash -c \"source /opt/protecht/venv/bin/activate && pip install --upgrade pip && pip install -r /opt/protecht/proTecht/deploy_package/requirements.txt\"","sudo systemctl restart protecht","sleep 2","curl -sf http://127.0.0.1:8000/api/health"]' \
             --timeout-seconds 1800 > /tmp/ssm.json
           id=$(jq -r .Command.CommandId /tmp/ssm.json)
           echo SSM_COMMAND_ID=$id
