@@ -1,0 +1,36 @@
+{
+  "CallerReference": "api-cf-$(date +%s)",
+  "Comment": "proTecht API via CloudFront",
+  "Enabled": true,
+  "Origins": {
+    "Quantity": 1,
+    "Items": [
+      {
+        "Id": "api-alb-origin",
+        "DomainName": "protec-Publi-d6VUhLtO713D-2114058116.us-east-1.elb.amazonaws.com",
+        "CustomOriginConfig": {
+          "HTTPPort": 80,
+          "HTTPSPort": 443,
+          "OriginProtocolPolicy": "http-only",
+          "OriginSslProtocols": {"Quantity": 1, "Items": ["TLSv1.2"]}
+        }
+      }
+    ]
+  },
+  "DefaultCacheBehavior": {
+    "TargetOriginId": "api-alb-origin",
+    "ViewerProtocolPolicy": "redirect-to-https",
+    "AllowedMethods": {
+      "Quantity": 7,
+      "Items": ["GET", "HEAD", "OPTIONS", "PUT", "POST", "PATCH", "DELETE"],
+      "CachedMethods": {"Quantity": 2, "Items": ["GET", "HEAD"]}
+    },
+    "ForwardedValues": {"QueryString": true, "Cookies": {"Forward": "all"}},
+    "Compress": true,
+    "DefaultTTL": 0,
+    "MinTTL": 0,
+    "MaxTTL": 0
+  },
+  "PriceClass": "PriceClass_All",
+  "ViewerCertificate": {"CloudFrontDefaultCertificate": true}
+}
